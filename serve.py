@@ -10,7 +10,7 @@ def handle_request():
     if request.method == 'GET':
         return socket.gethostname()
     elif request.method == 'POST':
-        process = subprocess.Popen(["python", "./stress_cpu.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        process = subprocess.Popen(["python3", "stress_cpu.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         return "post complete"
 
 
